@@ -25,6 +25,9 @@ over_font = pygame.font.Font('data/samuf.ttf', 64)
 # Background Image
 background = pygame.image.load("data/background.jpg")
 
+# clock
+clock=pygame.time.Clock()
+
 # Background Music
 mixer.music.load('data/background.wav')
 mixer.music.play(-1)
@@ -104,6 +107,7 @@ while running:
     screen.fill((128, 0, 0))
     screen.blit(background, (0, 0))
     # playerX+=0.1
+    clock.tick(0)
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             running = False
